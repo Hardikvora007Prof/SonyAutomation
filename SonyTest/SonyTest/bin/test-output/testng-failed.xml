@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="2" guice-stage="DEVELOPMENT" name="Failed suite [SonyLivSuite]" parallel="none">
+  <test name="Browsers(failed)" parallel="none">
+    <classes>
+      <class name="com.homepage.Browsers">
+        <methods>
+          <include name="loadProperties"/>
+          <include name="quitBrowser"/>
+          <include name="openChromeBrowser"/>
+        </methods>
+      </class> <!-- com.homepage.Browsers -->
+    </classes>
+  </test> <!-- Browsers(failed) -->
+  <test name="ShareOnMouseHover(failed)" parallel="none">
+    <classes>
+      <class name="com.homepage.ShareOnMouseHover">
+        <methods>
+          <include name="shareCheck"/>
+        </methods>
+      </class> <!-- com.homepage.ShareOnMouseHover -->
+      <class name="com.homepage.Browsers">
+        <methods>
+          <include name="loadProperties"/>
+          <include name="quitBrowser"/>
+        </methods>
+      </class> <!-- com.homepage.Browsers -->
+    </classes>
+  </test> <!-- ShareOnMouseHover(failed) -->
+</suite> <!-- Failed suite [SonyLivSuite] -->
